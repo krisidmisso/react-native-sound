@@ -106,6 +106,23 @@ https://github.com/benevbright/react-native-sound-playerview
 
 ## Basic usage
 
+
+## To Load Files from Network
+
+Second parameter will be ```null``` 
+
+```
+var file_name = new Sound(LINK_TO_THE_FILE, null , (error) => {
+  if (error) {
+    console.log('failed to load the sound', error);
+    return;
+  }
+  .......
+  .......
+  .......
+```
+
+
 First you'll need to add audio files to your project.
 
 - Android: Save your sound clip files under the directory `android/app/src/main/res/raw`. Note that files in this directory must be lowercase and underscored (e.g. my_file_name.mp3) and that subdirectories are not supported by Android.
