@@ -186,7 +186,8 @@ whoosh.stop(() => {
 });
 
 // Release the audio player resource
-whoosh.release();
+NEW: Sound.setActive(false, true);
+//OLD: whoosh.release();
 ```
 
 ## Notes
