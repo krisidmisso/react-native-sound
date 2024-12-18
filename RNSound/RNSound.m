@@ -114,15 +114,9 @@ RCT_EXPORT_METHOD(enable : (BOOL)enabled) {
     [session setActive:enabled error:nil];
 }
 
-RCT_EXPORT_METHOD(setActive 
-                    : (BOOL)active 
-                    notifyOthersOnDeactivation: (BOOL)notifyOthersOnDeactivation) {
+RCT_EXPORT_METHOD(setActive : (BOOL)active) {
     AVAudioSession *session = [AVAudioSession sharedInstance];
-    if (notifyOthersOnDeactivation) {
-        [session setActive:active withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:nil];
-    } else {
-        [session setActive:active error:nil];
-    }
+    [session setActive:active error:nil];
 }
 
 RCT_EXPORT_METHOD(setMode : (NSString *)modeName) {
